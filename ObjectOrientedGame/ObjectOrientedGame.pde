@@ -1,7 +1,7 @@
 // Asteroids type game
 
 void setup() {
-  size(800,800);
+  fullScreen();
    // put game state here (lose/win screen and/or pause)
 }
 
