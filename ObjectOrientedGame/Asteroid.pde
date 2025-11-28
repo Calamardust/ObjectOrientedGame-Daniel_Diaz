@@ -1,1 +1,0 @@
-// Asteroid / enemy / obstacle, class
