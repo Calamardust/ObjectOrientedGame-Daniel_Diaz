@@ -1,14 +1,15 @@
 // Space shooter
 
 Crosshair crosshair;
-Background background;
+Background[] background = new Background[2];
+
+
 
 void setup() {
   size(800, 800);
   noCursor();
   frameRate(60);
 
-  background = new Background();
   crosshair = new Crosshair();
 }
 
@@ -16,6 +17,13 @@ void draw() {
 
 
   background(0);
-  background.Display();
+
+for ( l = 0; l < background.length; l +=1) { 
+  background[0] = new Background(100, 255, 0, 0);
+}
   crosshair.Display();
+
+  for (int i = 0; i < background.length; i += 1) {
+    background[i].Display();
+  }
 }
