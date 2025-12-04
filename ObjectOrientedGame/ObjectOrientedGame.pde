@@ -1,16 +1,20 @@
 // Space shooter
 
 // classes
+Enemy enemy;
 Crosshair crosshair;
 Stars stars;
 Background[] background = new Background[9];
 int i = 0;
+int seed;
 
 
 void setup() {
   size(800, 800);
   noCursor();
   frameRate(60);
+   
+   seed = (int)random(0,100);
 
 // array for each stripe in background
   background[0] = new Background(0, 95, 10, 100);
@@ -23,6 +27,7 @@ void setup() {
   background[7] = new Background(700, 0, 0, 0);
   background[8] = new Background(800, 95, 10, 100);
 
+  enemy = new Enemy();
   crosshair = new Crosshair();
   stars = new Stars();
 }
@@ -34,8 +39,8 @@ void draw() {
 
     background[i].Display();
   }
-
-
+  enemy.Update();
+  enemy.Display();
   crosshair.Display();
-  stars.Display();
+  stars.Display(seed);
 }

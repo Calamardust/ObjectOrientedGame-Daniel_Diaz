@@ -93,7 +93,7 @@ class Crosshair {
       endShape();
     }
     // Resets timer and stops firing
-    if (timer >= timerLength) {
+    if (timer >= timerLength) {  
       timer = 0;
       shooting = false;
     }

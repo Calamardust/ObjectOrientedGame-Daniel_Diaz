@@ -4,8 +4,9 @@ class Stars {
   Stars() {
   }
 
-  void Display() {
-    randomSeed(0);
+  void Display(int s) {
+   
+    randomSeed(s);
     for (int i = 0; i <= 300; i += 1) {
 
       noStroke();
