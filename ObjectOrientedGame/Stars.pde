@@ -4,7 +4,7 @@ class Stars {
   Stars() {
   }
 
-  void stars() {
+  void Display() {
     randomSeed(0);
     for (int i = 0; i <= 300; i += 1) {
 
