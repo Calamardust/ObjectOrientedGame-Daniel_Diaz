@@ -1,4 +1,4 @@
-
+// Background class
 class Background {
 
   float noiseY;
@@ -8,6 +8,7 @@ class Background {
   float Green;
   float Ypos;
 
+// constructor of background
   Background(float ypos, float r, float g, float b) {
 
     Red = r;
