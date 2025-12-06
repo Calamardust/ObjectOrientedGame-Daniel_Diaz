@@ -4,9 +4,7 @@ class Crosshair {
   // values for the timer
   float timerLength = 20;
   float timer = 0;
-  // values for the fire cooldown
-  float timerCooldown = 60;
-  float timerC = 0;
+
   // boolean for shooting state
   boolean shooting = false;
 
@@ -15,13 +13,12 @@ class Crosshair {
 
   void Display() {
 
-     // "Follow the mouse" values
+    // "Follow the mouse" values
     float x = mouseX;
     float y = mouseY;
 
-    // Draws the blue crosshair when not firing, and increases timerC each frame
+    // Draws the blue crosshair when not firing
     if (shooting == false) {
-      timerC += 1;
 
       strokeWeight(5);
       stroke(0, 0, 255);
@@ -51,15 +48,12 @@ class Crosshair {
       vertex(x - 10, y);
       endShape();
     }
-    // prevents the player for constanly shooting / fire cooldown
-    if (timerC >= timerCooldown) {
-      // starts shooting when mouse is pressed
-      if (shooting == false && mousePressed) {
-        shooting = true;
-      }
-      // resets timerC 
-      timerC = 0; 
+
+    // starts shooting when mouse is pressed
+    if (shooting == false && mousePressed) {
+      shooting = true;
     }
+
     // Draws red crosshair when firing and increases timer each frame
     if (shooting == true) {
       timer += 1;
@@ -93,7 +87,7 @@ class Crosshair {
       endShape();
     }
     // Resets timer and stops firing
-    if (timer >= timerLength) {  
+    if (timer >= timerLength) {
       timer = 0;
       shooting = false;
     }

@@ -4,10 +4,10 @@ class Stars {
   Stars() {
   }
 
-  void Display(int s) {
+  void Display(int s) { // int s for the seed
    
-    randomSeed(s);
-    for (int i = 0; i <= 300; i += 1) {
+    randomSeed(s); 
+    for (int i = 0; i <= 300; i += 1) { // draws a lot of stars
 
       noStroke();
       fill(255, 255, 255);
